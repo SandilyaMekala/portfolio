@@ -12,8 +12,8 @@ export function Avatar(props) {
   const { scene } = useGLTF(process.env.PUBLIC_URL + '/glb/Sandy_Avatar.glb');
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
-  const { animations: idleAnimation } = useFBX('/animations/Idle.fbx');
-  const { animations: greetingAnimation } = useFBX('/animations/Greeting.fbx');
+  const { animations: idleAnimation } = useFBX(process.env.PUBLIC_URL + '/animations/Idle.fbx');
+  const { animations: greetingAnimation } = useFBX(process.env.PUBLIC_URL + '/animations/Greeting.fbx');
 
   idleAnimation[0].name = 'Idle';
   greetingAnimation[0].name = 'Greeting'
