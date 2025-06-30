@@ -13,7 +13,7 @@ function App() {
         width: '100vw',
         height: '100vh',
         overflow: 'hidden',
-        backgroundImage: process.env.PUBLIC_URL + 'url(/textures/images.jpg)',
+        backgroundImage: `url(${process.env.PUBLIC_URL}/textures/images.jpg)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
