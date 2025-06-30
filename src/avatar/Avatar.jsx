@@ -9,7 +9,7 @@ import { useAnimations, useFBX, useGLTF } from '@react-three/drei'
 import { SkeletonUtils } from 'three-stdlib'
 
 export function Avatar(props) {
-  const { scene } = useGLTF('/glb/Sandy_Avatar.glb');
+  const { scene } = useGLTF(process.env.PUBLIC_URL + '/glb/Sandy_Avatar.glb');
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
   const { animations: idleAnimation } = useFBX('/animations/Idle.fbx');
@@ -53,4 +53,4 @@ export function Avatar(props) {
   )
 }
 
-useGLTF.preload('/glb/Sandy_Avatar.glb')
+useGLTF.preload(process.env.PUBLIC_URL + '/glb/Sandy_Avatar.glb')
