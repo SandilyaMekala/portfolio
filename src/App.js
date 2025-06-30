@@ -1,23 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
+import { Canvas } from "@react-three/fiber";
+import { Experience } from './avatar/Experience';
+import Home from './content/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="App"
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        width: '100vw',
+        height: '100vh',
+        overflow: 'hidden',
+        backgroundImage: 'url(/textures/images.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    >
+      <div
+        style={{
+          width: '65vw',
+          height: '100vh',
+          padding: '2rem',
+          overflowY: 'auto',
+        }}
+      >
+        <Home />
+      </div>
+      <div
+        style={{
+          width: '35vw',
+          height: '100vh',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+      >
+        <Canvas shadows camera={{ position: [0, 2.5, 8], fov: 60 }}>
+          <Experience />
+        </Canvas>
+      </div>
     </div>
   );
 }
