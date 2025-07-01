@@ -46,7 +46,7 @@
 
 .home-section {
   width: 65vw;
-  height: 95vh;
+  height: 93vh;
   padding: 2rem;
   overflow-y: auto;
 }
@@ -65,7 +65,7 @@
 
   .home-section,
   .canvas-section {
-    width: 100vw;
+    width: 95vw;
     height: 50vh;
     padding: 1rem;
   }
@@ -74,7 +74,7 @@
 @media (max-width: 600px) {
   .home-section,
   .canvas-section {
-    height: 50vh;
+    height: 45vh;
     padding: 0.5rem;
   }
 
