@@ -1,7 +1,5 @@
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Avatar } from './Avatar';
-import { useThree } from "@react-three/fiber";
-import * as THREE from 'three';
 import { Platform } from "./Platform";
 
 export const Experience = () => {

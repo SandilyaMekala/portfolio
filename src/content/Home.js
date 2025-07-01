@@ -8,10 +8,17 @@ const Home = () => {
             <strong>Email:</strong> <a href="mailto:sandilyamekala@gmail.com">sandilyamekala@gmail.com</a> | <strong>Phone:</strong> 602-561-3152<br />
             <a href="https://www.linkedin.com/in/sandilya-mekala-42823115b/" target="_blank">LinkedIn</a> |{' '}
             <a href="https://github.com/SandilyaMekala" target="_blank">GitHub</a> |{' '}
-            <a href="/Sandilya_Mekala_Resume.docx" download className="download-button">
+            <a href={`${process.env.PUBLIC_URL}/files/Sandilya_Mekala_Resume.docx`} download className="download-button">
                 Resume
             </a>
         </p>
+
+        <section>
+            <h1>About me</h1>
+            <p>
+                I'm an enthusiastic frontend developer with 3+ years of experience. I update myself with latest technologies and am a constant learner.
+            </p>
+        </section>
 
         <section>
             <h1>Education</h1>
