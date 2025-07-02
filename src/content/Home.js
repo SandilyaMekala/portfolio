@@ -1,17 +1,22 @@
 import './Home.css';
+import { Email, FilePresent, GitHub, Launch, LocalPhone, LinkedIn } from '@mui/icons-material';
 
 const Home = () => {
   return (
     <div className='home-container'>
         <h1>Hi, I'm Sandilya Mekala</h1>
-        <p>
-            <strong>Email:</strong> <a href="mailto:sandilyamekala@gmail.com">sandilyamekala@gmail.com</a> | <strong>Phone:</strong> 602-561-3152<br />
-            <a href="https://www.linkedin.com/in/sandilya-mekala-42823115b/" target="_blank">LinkedIn</a> |{' '}
-            <a href="https://github.com/SandilyaMekala" target="_blank">GitHub</a> |{' '}
-            <a href={`${process.env.PUBLIC_URL}/files/Sandilya_Mekala_Resume.docx`} download className="download-button">
-                Resume
-            </a>
-        </p>
+        <div className="contact-info">
+            <div className="row">
+                <span className="item"><Email className="icon" /><a href="mailto:sandilyamekala@gmail.com">sandilyamekala@gmail.com</a></span>
+                <span className="item"><LocalPhone className="icon" />602-561-3152</span>
+            </div>
+            <div className="row">
+                <span className="item"><LinkedIn className="icon" /><a href="https://www.linkedin.com/in/sandilya-mekala-42823115b/" target="_blank" rel="noreferrer">LinkedIn</a></span>
+                <span className="item"><GitHub className="icon" /><a href="https://github.com/SandilyaMekala" target="_blank" rel="noreferrer">GitHub</a></span>
+                <span className="item"><FilePresent className="icon" /><a href={`${process.env.PUBLIC_URL}/files/Sandilya_Mekala_Resume.docx`} download className="download-button">Resume</a></span>
+            </div>
+        </div>
+
 
         <section>
             <h1>About me</h1>
@@ -58,7 +63,11 @@ const Home = () => {
         <section>
             <h1>Projects</h1>
             <p>
-            <strong><a href="https://closed-bird-duck.glitch.me" target="_blank">AI Chatbot</a></strong><br />
+                <strong>
+                    <a href="https://closed-bird-duck.glitch.me" target="_blank" rel="noopener noreferrer" className="external-link">
+                        AI Chatbot <Launch className="icon" color="primary" fontSize='smaller' />
+                    </a>
+                </strong><br />
                 Integrated LLM models such as Mistral for text and stable-diffusion for image generation for an AI chatbot.
             </p>
             <p>
