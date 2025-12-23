@@ -18,7 +18,7 @@ function App() {
       )}
 
       {started && (
-        <div className="main-container"  style={{backgroundImage: `url(${process.env.PUBLIC_URL}/textures/images.jpg)`}}>
+        <div className="main-container"  style={{backgroundImage: `url(${process.env.PUBLIC_URL}/textures/image.jpg)`}}>
           <div className="home-section">
             <Home />
           </div>
